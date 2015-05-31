@@ -1,4 +1,6 @@
 class SlackInterpretersController < ApplicationController
+    skip_before_action :authenticate_user!
+
     def new_task
         team = Team.find_by_slack_token(params[:token])
         user = team.present? ? team.users.find_by_slack_username(params[:user_name]) : nil
