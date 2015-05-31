@@ -13,8 +13,12 @@ Rails.application.routes.draw do
   resources :tasks
   resources :slack_interpreters do
     collection do
-      get 'new_task'
+      get 'tasks'
+      post 'tasks'
       post 'new_task'
+      get 'new_task'
+      post 'all_tasks'
+      get 'all_tasks'
     end
   end
 
