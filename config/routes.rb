@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :slack_interpreters do
     collection do
       get 'new_task'
+      post 'new_task'
     end
   end
 
