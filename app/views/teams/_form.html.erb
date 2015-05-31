@@ -1,0 +1,11 @@
+<%= form_for @team do |f| %>
+    <%= render "shared/error_messages", target: @team %>
+
+    <%= f.label :name, "What's the name of this team?" %>
+    <%= f.text_field :name %><br><br>
+
+    <%= f.label :slack_token, "Slack Token:" %>
+    <%= f.text_field :slack_token %><br><br>
+
+    <%= f.submit 'Submit' %>
+<% end %>

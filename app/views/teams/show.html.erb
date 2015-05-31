@@ -1,0 +1,16 @@
+<p><%= link_to "Edit Team", edit_team_path(@team) %></p>
+<h1><%= @team.name %></h1>
+<p><b>Slack Token:</b> <%= @team.slack_token %></p>
+
+<h3>Members:</h3>
+<ul>
+    <%= render @team.users %>
+</ul>
+
+<h3>Tasks:</h3>
+<%= render 'tasks/form' %>
+<% if @team.tasks.present? %>
+    <ul>
+        <%= render @team.tasks %>
+    </ul>
+<% end %>

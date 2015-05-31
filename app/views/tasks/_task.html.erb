@@ -1,0 +1,1 @@
+<li><%= task.description %> - <b><%= task.user.slack_username %></b> (<%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>)</li>

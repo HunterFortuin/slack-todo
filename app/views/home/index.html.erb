@@ -1,1 +1,6 @@
 <h1>Welcome to The Slack Todo App!</h1>
+<h3>Your Teams</h3>
+<ul>
+    <%= render current_user.teams %>
+    <li><%= link_to "Create a New Team", new_team_path %></li>
+</ul>
