@@ -11,6 +11,11 @@ Rails.application.routes.draw do
 
   resources :teams
   resources :tasks
+  resources :slack_interpreters do
+    collection do
+      get 'new_task'
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
